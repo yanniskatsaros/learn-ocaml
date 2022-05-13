@@ -3,8 +3,7 @@
  *)
 let times10 x = 10 * x
 
-let both_nonzero a b =
-  if (a <> 0) && (b <> 0) then true else false
+let both_nonzero a b = (a <> 0) && (b <> 0)
 
 let rec sum n =
   if n = 0 then 0 else n + sum (n - 1)
@@ -13,10 +12,10 @@ let rec power x n =
   if n = 0 then 1 else x * power x (n - 1)
 
 let isconsonant c =
-  if c = 'a'
+  not (c = 'a'
     || c = 'e'
     || c = 'o' 
-    || c = 'u' then false else true
+    || c = 'u')
 
 let rec factorial n =
   if n < 1 then 0
